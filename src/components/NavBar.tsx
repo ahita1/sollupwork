@@ -1,6 +1,7 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Image, Form, FormControl, Nav, NavDropdown, Navbar, Button, ButtonGroup, DropdownButton, Dropdown } from 'react-bootstrap';
+import { Nav, NavDropdown, Navbar } from 'react-bootstrap';
+
 
 const NavBar = () => {
   return (
