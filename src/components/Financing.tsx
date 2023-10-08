@@ -8,7 +8,7 @@ import Image from 'react-bootstrap/Image';
 
 const Financing = () => {
   return (
-    <div>
+    <div >
         <div>
           <div id="component" className="container-fluid py-3">
         <div className=" row justify-content-center align-items-center">
