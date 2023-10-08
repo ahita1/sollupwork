@@ -5,9 +5,10 @@ import { Nav, NavDropdown, Navbar } from 'react-bootstrap';
 
 const NavBar = () => {
   return (
-    <div>
-      {/* <Navbar bg="" expand="lg">
-  <Navbar.Brand href="#home"><svg xmlns="http://www.w3.org/2000/svg" width="237" height="45" viewBox="0 0 237 45" fill="none">
+<div id="component" className="container-fluid py-3">
+    <div className="px-1 py-1  row justify-content-between align-items-center">
+    <div className="position-relative col-xl-2 row">
+    <Navbar.Brand href="#home"><svg xmlns="http://www.w3.org/2000/svg" width="237" height="45" viewBox="0 0 237 45" fill="none">
   <g clip-path="url(#clip0_1537_546)">
     <path d="M185.774 15.9116L156.697 28.7259L185.939 22.9571L236.141 36.7645L185.774 15.9116Z" fill="white"/>
     <path d="M216.144 25.2741L185.664 0L147.727 27.4965H0V28.7259H149.012L185.522 11.7662L216.144 25.2741Z" fill="#98002E"/>
@@ -32,31 +33,58 @@ const NavBar = () => {
     </clipPath>
   </defs>
 </svg></Navbar.Brand>
- 
-<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M6.70024 9.62993C6.74132 9.58874 6.79013 9.55607 6.84386 9.53377C6.89759 9.51148 6.95519 9.5 7.01336 9.5C7.07153 9.5 7.12913 9.51148 7.18286 9.53377C7.23659 9.55607 7.28539 9.58874 7.32648 9.62993L12.3204 14.6248L17.3144 9.62993C17.3555 9.58881 17.4043 9.55619 17.458 9.53394C17.5118 9.51169 17.5693 9.50023 17.6275 9.50023C17.6856 9.50023 17.7432 9.51169 17.797 9.53394C17.8507 9.55619 17.8995 9.58881 17.9406 9.62993C17.9817 9.67105 18.0144 9.71986 18.0366 9.77359C18.0589 9.82731 18.0703 9.8849 18.0703 9.94305C18.0703 10.0012 18.0589 10.0588 18.0366 10.1125C18.0144 10.1662 17.9817 10.215 17.9406 10.2562L12.6335 15.5632C12.5925 15.6044 12.5437 15.6371 12.4899 15.6594C12.4362 15.6817 12.3786 15.6932 12.3204 15.6932C12.2623 15.6932 12.2047 15.6817 12.1509 15.6594C12.0972 15.6371 12.0484 15.6044 12.0073 15.5632L6.70024 10.2562C6.65906 10.2151 6.62638 10.1663 6.60408 10.1125C6.58179 10.0588 6.57031 10.0012 6.57031 9.94305C6.57031 9.88487 6.58179 9.82727 6.60408 9.77354C6.62638 9.71981 6.65906 9.67101 6.70024 9.62993Z" fill="white"/>
-</svg>
-
-{[ 'Buyer','Seller','Investors','Property Management'].map(
-    (variant) => (
-      <DropdownButton
-        as={ButtonGroup}
-        key={variant}
-        id={`dropdown-variants-${variant}`}
-        variant={variant.toLowerCase()}
-        title={variant}
-      >
-        <Dropdown.Item eventKey="1">Action</Dropdown.Item>
-        <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
-        <Dropdown.Item eventKey="3" active>
-          Active Item
-        </Dropdown.Item>
-        <Dropdown.Divider />
-        <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
-      </DropdownButton>
-    ),
-  )}
-  <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+        </div>
+        <div className=" col-xl-6 row justify-content-center align-items-center d-flex">
+            <div className="col-2">
+                <div className="px-1 py-1 rounded-1 col-12 justify-content-center align-items-center d-flex">
+                <div className="col-10 d-flex justify-content-center align-items-center">
+    <p className="text-center text-white fs-6 fw-normal font-family-Poppins m-0 px-3 py-2 d-flex align-items-center"> 
+    Buyer
+        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.70024 9.62993C6.74132 9.58874 6.79013 9.55607 6.84386 9.53377C6.89759 9.51148 6.95519 9.5 7.01336 9.5C7.07153 9.5 7.12913 9.51148 7.18286 9.53377C7.23659 9.55607 7.28539 9.58874 7.32648 9.62993L12.3204 14.6248L17.3144 9.62993C17.3555 9.58881 17.4043 9.55619 17.458 9.53394C17.5118 9.51169 17.5693 9.50023 17.6275 9.50023C17.6856 9.50023 17.7432 9.51169 17.797 9.53394C17.8507 9.55619 17.8995 9.58881 17.9406 9.62993C17.9817 9.67105 18.0144 9.71986 18.0366 9.77359C18.0589 9.82731 18.0703 9.8849 18.0703 9.94305C18.0703 10.0012 18.0589 10.0588 18.0366 10.1125C18.0144 10.1662 17.9817 10.215 17.9406 10.2562L12.6335 15.5632C12.5925 15.6044 12.5437 15.6371 12.4899 15.6594C12.4362 15.6817 12.3786 15.6932 12.3204 15.6932C12.2623 15.6932 12.2047 15.6817 12.1509 15.6594C12.0972 15.6371 12.0484 15.6044 12.0073 15.5632L6.70024 10.2562C6.65906 10.2151 6.62638 10.1663 6.60408 10.1125C6.58179 10.0588 6.57031 10.0012 6.57031 9.94305C6.57031 9.88487 6.58179 9.82727 6.60408 9.77354C6.62638 9.71981 6.65906 9.67101 6.70024 9.62993Z" fill="white"/>
+        </svg>
+    </p>
+</div>
+                </div>
+            </div>
+            <div className="col-1">
+                <div className="px-1 py-1 rounded-1 col-12 justify-content-center align-items-center d-flex">
+                <div className="col-10 d-flex justify-content-center align-items-center">
+    <p className="text-center text-white fs-6 fw-normal font-family-Poppins m-0 px-3 py-2 d-flex align-items-center"> 
+        Seller
+        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.70024 9.62993C6.74132 9.58874 6.79013 9.55607 6.84386 9.53377C6.89759 9.51148 6.95519 9.5 7.01336 9.5C7.07153 9.5 7.12913 9.51148 7.18286 9.53377C7.23659 9.55607 7.28539 9.58874 7.32648 9.62993L12.3204 14.6248L17.3144 9.62993C17.3555 9.58881 17.4043 9.55619 17.458 9.53394C17.5118 9.51169 17.5693 9.50023 17.6275 9.50023C17.6856 9.50023 17.7432 9.51169 17.797 9.53394C17.8507 9.55619 17.8995 9.58881 17.9406 9.62993C17.9817 9.67105 18.0144 9.71986 18.0366 9.77359C18.0589 9.82731 18.0703 9.8849 18.0703 9.94305C18.0703 10.0012 18.0589 10.0588 18.0366 10.1125C18.0144 10.1662 17.9817 10.215 17.9406 10.2562L12.6335 15.5632C12.5925 15.6044 12.5437 15.6371 12.4899 15.6594C12.4362 15.6817 12.3786 15.6932 12.3204 15.6932C12.2623 15.6932 12.2047 15.6817 12.1509 15.6594C12.0972 15.6371 12.0484 15.6044 12.0073 15.5632L6.70024 10.2562C6.65906 10.2151 6.62638 10.1663 6.60408 10.1125C6.58179 10.0588 6.57031 10.0012 6.57031 9.94305C6.57031 9.88487 6.58179 9.82727 6.60408 9.77354C6.62638 9.71981 6.65906 9.67101 6.70024 9.62993Z" fill="white"/>
+        </svg>
+    </p>
+</div>
+                </div>
+            </div>
+            <div className="col-2">
+                <div className="px-1 py-1 rounded-1 col-12 justify-content-center align-items-center d-flex">
+                <div className="col-10 d-flex justify-content-center align-items-center">
+    <p className="text-center text-white fs-6 fw-normal font-family-Poppins m-0 px-3 py-2 d-flex align-items-center"> 
+        Investors
+        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.70024 9.62993C6.74132 9.58874 6.79013 9.55607 6.84386 9.53377C6.89759 9.51148 6.95519 9.5 7.01336 9.5C7.07153 9.5 7.12913 9.51148 7.18286 9.53377C7.23659 9.55607 7.28539 9.58874 7.32648 9.62993L12.3204 14.6248L17.3144 9.62993C17.3555 9.58881 17.4043 9.55619 17.458 9.53394C17.5118 9.51169 17.5693 9.50023 17.6275 9.50023C17.6856 9.50023 17.7432 9.51169 17.797 9.53394C17.8507 9.55619 17.8995 9.58881 17.9406 9.62993C17.9817 9.67105 18.0144 9.71986 18.0366 9.77359C18.0589 9.82731 18.0703 9.8849 18.0703 9.94305C18.0703 10.0012 18.0589 10.0588 18.0366 10.1125C18.0144 10.1662 17.9817 10.215 17.9406 10.2562L12.6335 15.5632C12.5925 15.6044 12.5437 15.6371 12.4899 15.6594C12.4362 15.6817 12.3786 15.6932 12.3204 15.6932C12.2623 15.6932 12.2047 15.6817 12.1509 15.6594C12.0972 15.6371 12.0484 15.6044 12.0073 15.5632L6.70024 10.2562C6.65906 10.2151 6.62638 10.1663 6.60408 10.1125C6.58179 10.0588 6.57031 10.0012 6.57031 9.94305C6.57031 9.88487 6.58179 9.82727 6.60408 9.77354C6.62638 9.71981 6.65906 9.67101 6.70024 9.62993Z" fill="white"/>
+        </svg>
+    </p>
+</div>
+                </div>
+            </div>
+            <div className="col-4">  
+                <div className="px-1 py-1 rounded-1 col-12 justify-content-center align-items-center d-flex">
+                <div className="col-10 d-flex justify-content-center align-items-center">
+    <p className="text-center text-white fs-6 fw-normal font-family-Poppins m-0 px-3 py-2 d-flex align-items-center"> 
+        Property Management
+        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.70024 9.62993C6.74132 9.58874 6.79013 9.55607 6.84386 9.53377C6.89759 9.51148 6.95519 9.5 7.01336 9.5C7.07153 9.5 7.12913 9.51148 7.18286 9.53377C7.23659 9.55607 7.28539 9.58874 7.32648 9.62993L12.3204 14.6248L17.3144 9.62993C17.3555 9.58881 17.4043 9.55619 17.458 9.53394C17.5118 9.51169 17.5693 9.50023 17.6275 9.50023C17.6856 9.50023 17.7432 9.51169 17.797 9.53394C17.8507 9.55619 17.8995 9.58881 17.9406 9.62993C17.9817 9.67105 18.0144 9.71986 18.0366 9.77359C18.0589 9.82731 18.0703 9.8849 18.0703 9.94305C18.0703 10.0012 18.0589 10.0588 18.0366 10.1125C18.0144 10.1662 17.9817 10.215 17.9406 10.2562L12.6335 15.5632C12.5925 15.6044 12.5437 15.6371 12.4899 15.6594C12.4362 15.6817 12.3786 15.6932 12.3204 15.6932C12.2623 15.6932 12.2047 15.6817 12.1509 15.6594C12.0972 15.6371 12.0484 15.6044 12.0073 15.5632L6.70024 10.2562C6.65906 10.2151 6.62638 10.1663 6.60408 10.1125C6.58179 10.0588 6.57031 10.0012 6.57031 9.94305C6.57031 9.88487 6.58179 9.82727 6.60408 9.77354C6.62638 9.71981 6.65906 9.67101 6.70024 9.62993Z" fill="white"/>
+        </svg>
+    </p>
+</div>
+                </div>
+            </div>
+            <div className="col-1">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1537_600)">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M9.70717 9.63675C9.78843 9.5554 9.88493 9.49086 9.99116 9.44683C10.0974 9.40279 10.2112 9.38013 10.3262 9.38013C10.4412 9.38013 10.5551 9.40279 10.6613 9.44683C10.7675 9.49086 10.864 9.5554 10.9453 9.63675L14.314 13.0055C14.4782 13.1696 14.5705 13.3921 14.5706 13.6243C14.5707 13.8564 14.4785 14.079 14.3145 14.2432C14.1504 14.4074 13.9278 14.4997 13.6957 14.4997C13.4636 14.4998 13.241 14.4077 13.0768 14.2436L9.70804 10.8749C9.62669 10.7936 9.56215 10.6971 9.51811 10.5909C9.47408 10.4847 9.45142 10.3708 9.45142 10.2558C9.45142 10.1408 9.47408 10.027 9.51811 9.92074C9.56215 9.81452 9.62669 9.71802 9.70804 9.63675H9.70717Z" fill="white"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.25781 11C6.8898 11 7.5156 10.8755 8.09948 10.6337C8.68336 10.3918 9.21388 10.0373 9.66076 9.59045C10.1076 9.14357 10.4621 8.61304 10.704 8.02916C10.9458 7.44528 11.0703 6.81949 11.0703 6.1875C11.0703 5.55551 10.9458 4.92972 10.704 4.34584C10.4621 3.76196 10.1076 3.23143 9.66076 2.78455C9.21388 2.33767 8.68336 1.98318 8.09948 1.74133C7.5156 1.49948 6.8898 1.375 6.25781 1.375C4.98146 1.375 3.75738 1.88203 2.85486 2.78455C1.95234 3.68707 1.44531 4.91115 1.44531 6.1875C1.44531 7.46385 1.95234 8.68793 2.85486 9.59045C3.75738 10.493 4.98146 11 6.25781 11ZM11.9453 6.1875C11.9453 7.69592 11.3461 9.14256 10.2795 10.2092C9.21287 11.2758 7.76623 11.875 6.25781 11.875C4.74939 11.875 3.30276 11.2758 2.23614 10.2092C1.16953 9.14256 0.570313 7.69592 0.570312 6.1875C0.570313 4.67908 1.16953 3.23244 2.23614 2.16583C3.30276 1.09922 4.74939 0.5 6.25781 0.5C7.76623 0.5 9.21287 1.09922 10.2795 2.16583C11.3461 3.23244 11.9453 4.67908 11.9453 6.1875Z" fill="white"/>
@@ -68,260 +96,43 @@ const NavBar = () => {
 </defs>
 </svg>
 
-
-{[ 'About'].map(
-    (variant) => (
-      <DropdownButton
-        as={ButtonGroup}
-        key={variant}
-        id={`dropdown-variants-${variant}`}
-        variant={variant.toLowerCase()}
-        title={variant}
-      >
-        <Dropdown.Item eventKey="1">Action</Dropdown.Item>
-        <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
-        <Dropdown.Item eventKey="3" active>
-          Active Item
-        </Dropdown.Item>
-        <Dropdown.Divider />
-        <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
-      </DropdownButton>
-    ),
-  )}
-
-<Button variant="outline-secondary">Agents</Button>{' '}
-
-<Button variant="outline-secondary">Contact</Button>{' '}
-
-
-  <Navbar.Toggle aria-controls="basic-navbar-nav" />
- 
-      </Navbar> */}
-
-      <Navbar expand="lg" style={{ color: 'white' }}>
-        <Navbar.Brand href="#home">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="237"
-            height="45"
-            viewBox="0 0 237 45"
-            fill="none"
-          >
-            <g clip-path="url(#clip0_1537_546)">
-              <path
-                d="M185.774 15.9116L156.697 28.7259L185.939 22.9571L236.141 36.7645L185.774 15.9116Z"
-                fill="white"
-              />
-              <path
-                d="M216.144 25.2741L185.664 0L147.727 27.4965H0V28.7259H149.012L185.522 11.7662L216.144 25.2741Z"
-                fill="#98002E"
-              />
-              <path
-                d="M26.6417 37.7811C27.1304 37.6629 27.5875 37.458 27.9895 37.1821C28.3915 36.9063 28.7305 36.5359 28.9906 36.0946C29.2507 35.6454 29.3768 35.0779 29.3768 34.4002C29.3768 33.6751 29.2428 33.0683 28.9669 32.6112C28.6989 32.1462 28.3442 31.7837 27.9107 31.5158C27.4851 31.2557 27.0043 31.0744 26.4604 30.9799C25.9323 30.8853 25.3963 30.838 24.884 30.838H20.9114V45.0079H21.5814V37.986H24.6633L28.8408 44.9527L28.8723 45.0079H29.6369L25.4042 37.9624C25.8062 37.9466 26.2161 37.8914 26.6338 37.789L26.6417 37.7811ZM21.5892 37.3713V31.4527H24.6554C25.1677 31.4527 25.6801 31.5 26.1766 31.5867C26.6653 31.6734 27.0989 31.831 27.4772 32.0517C27.8477 32.2723 28.1472 32.5718 28.3679 32.958C28.5886 33.3363 28.7068 33.8249 28.7068 34.4002C28.7068 35.338 28.3836 36.0788 27.7373 36.5911C27.091 37.1112 26.1215 37.3713 24.8682 37.3713H21.5814H21.5892Z"
-                fill="white"
-              />
-              <path
-                d="M41.1448 37.9781H48.3885V37.3476H41.1448V31.4685H48.8378V30.838H40.4749V45H49.1531V44.3774H41.1448V37.9781Z"
-                fill="white"
-              />
-              <path
-                d="M65.0119 30.838H64.3025L58.1624 45.0079H58.8954L60.6058 41.0123H68.5352L70.1905 45.0079H70.9156L65.0435 30.9168L65.0119 30.8459V30.838ZM60.858 40.3976L64.6336 31.5315L68.2988 40.3976H60.8659H60.858Z"
-                fill="white"
-              />
-              <path
-                d="M81.6038 30.838H80.9338V45H88.5322V44.3774H81.6038V30.838Z"
-                fill="white"
-              />
-              <path
-                d="M94.9797 31.4685H99.7248V45H100.395V31.4685H105.14V30.838H94.9797V31.4685Z"
-                fill="white"
-              />
-              <path
-                d="M118.319 38.1279L113.913 30.8932L113.881 30.838H113.093L117.964 38.8214V45H118.634V38.8214L123.513 30.838H122.741L118.319 38.1279Z"
-                fill="white"
-              />
-              <path
-                d="M3.14501 10.2925H3.20018L8.62309 24.8406H10.8774L16.3712 10.2925H16.4264V24.8406H19.6265V6.73029H14.5583L9.89999 19.5998H9.82117L5.11554 6.73029H0.0788574V24.8406H3.14501V10.2925Z"
-                fill="white"
-              />
-              <path
-                d="M27.3984 6.73029H24.1746V24.8406H27.3984V6.73029Z"
-                fill="white"
-              />
-              <path
-                d="M35.1779 15.7618H35.2567L43.2098 24.8406H47.7341L38.7091 15.0998L47.1745 6.73029H42.8236L35.2567 14.5639H35.1779V6.73029H31.9541V24.8406H35.1779V15.7618Z"
-                fill="white"
-              />
-              <path
-                d="M62.5998 21.9798H53.362V16.8651H61.6776V14.1541H53.362V9.54377H62.1348V6.73029H50.1382V24.8406H62.5998V21.9798Z"
-                fill="white"
-              />
-              <path
-                d="M76.4882 15.7618H76.567L84.5201 24.8406H89.0523L80.0194 15.0998L88.4848 6.73029H84.1417L76.567 14.5639H76.4882V6.73029H73.2644V24.8406H76.4882V15.7618Z"
-                fill="white"
-              />
-              <path
-                d="M92.4888 22.6261C93.348 23.4693 94.3727 24.1235 95.555 24.5963C96.7373 25.0613 98.03 25.2977 99.433 25.2977C100.836 25.2977 102.152 25.0613 103.35 24.5963C104.541 24.1313 105.573 23.4693 106.448 22.6261C107.315 21.7828 107.993 20.7741 108.482 19.6077C108.97 18.4413 109.215 17.1489 109.215 15.7303C109.215 14.3117 108.97 12.972 108.482 11.8056C107.993 10.6392 107.315 9.64622 106.448 8.82661C105.581 8.00699 104.548 7.37652 103.35 6.93519C102.152 6.49386 100.852 6.27319 99.433 6.27319C98.0142 6.27319 96.7452 6.49386 95.555 6.93519C94.3727 7.37652 93.348 8.00699 92.4888 8.82661C91.6297 9.64622 90.9518 10.6392 90.471 11.8056C89.9823 12.972 89.7458 14.2802 89.7458 15.7303C89.7458 17.1804 89.9902 18.4334 90.471 19.6077C90.9597 20.7741 91.6297 21.7828 92.4888 22.6261ZM93.6948 13.1217C93.9943 12.3179 94.4121 11.6243 94.9638 11.0254C95.5077 10.4264 96.1619 9.96146 96.9186 9.6147C97.6753 9.27582 98.5265 9.10244 99.4645 9.10244C100.402 9.10244 101.254 9.27582 102.026 9.6147C102.791 9.95358 103.453 10.4264 103.997 11.0254C104.541 11.6243 104.966 12.3179 105.266 13.1217C105.565 13.9256 105.715 14.7925 105.715 15.7303C105.715 16.6681 105.565 17.5902 105.266 18.4019C104.966 19.2136 104.541 19.9151 103.989 20.514C103.437 21.1129 102.775 21.5779 102.003 21.9089C101.238 22.2399 100.395 22.4054 99.4724 22.4054C98.5502 22.4054 97.7147 22.2399 96.9501 21.9089C96.1934 21.5779 95.5313 21.1129 94.9796 20.514C94.4278 19.9151 94.0022 19.2136 93.7027 18.4019C93.4032 17.5902 93.2534 16.6996 93.2534 15.7303C93.2534 14.7609 93.4032 13.9256 93.7027 13.1217H93.6948Z"
-                fill="white"
-              />
-              <path
-                d="M125.35 21.9798H116.112V16.8651H124.427V14.1541H116.112V9.54377H124.892V6.73029H112.896V24.8406H125.35V21.9798Z"
-                fill="white"
-              />
-              <path
-                d="M132.278 10.852H132.333L140.925 24.8406H145.023V6.73029H141.8V20.2933H141.744L133.334 6.73029H129.062V24.8406H132.278V10.852Z"
-                fill="white"
-              />
-            </g>
-            <defs>
-              <clipPath id="clip0_1537_546">
-                <rect width="236.141" height="45" fill="white" />
-              </clipPath>
-            </defs>
-          </svg>
-        </Navbar.Brand>
-
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav
-            className="d-flex"
-            style={{ justifyContent: "space-around", width: "100%", color: 'white'}}
-           
-          >
-            <NavDropdown
-              title="Buyer"
-              id="basic-nav-dropdown"
-              className="flex-item flex-grow-1"
-            >
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
-            <NavDropdown
-              title="Seller"
-              id="basic-nav-dropdown"
-              className="flex-item flex-grow-1"
-            >
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
-            <NavDropdown
-              title="Investors"
-              id="basic-nav-dropdown"
-              className="flex-item flex-grow-1"
-            >
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
-            <NavDropdown
-              title="Property Management"
-              id="basic-nav-dropdown"
-              className="flex-item flex-grow-1"
-            >
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
-
-            <Navbar.Brand href="#home">
-              {" "}
-              <svg
-                width="15"
-                height="15"
-                viewBox="0 0 15 15"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g clip-path="url(#clip0_1537_600)">
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M9.70717 9.63675C9.78843 9.5554 9.88493 9.49086 9.99116 9.44683C10.0974 9.40279 10.2112 9.38013 10.3262 9.38013C10.4412 9.38013 10.5551 9.40279 10.6613 9.44683C10.7675 9.49086 10.864 9.5554 10.9453 9.63675L14.314 13.0055C14.4782 13.1696 14.5705 13.3921 14.5706 13.6243C14.5707 13.8564 14.4785 14.079 14.3145 14.2432C14.1504 14.4074 13.9278 14.4997 13.6957 14.4997C13.4636 14.4998 13.241 14.4077 13.0768 14.2436L9.70804 10.8749C9.62669 10.7936 9.56215 10.6971 9.51811 10.5909C9.47408 10.4847 9.45142 10.3708 9.45142 10.2558C9.45142 10.1408 9.47408 10.027 9.51811 9.92074C9.56215 9.81452 9.62669 9.71802 9.70804 9.63675H9.70717Z"
-                    fill="white"
-                  />
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M6.25781 11C6.8898 11 7.5156 10.8755 8.09948 10.6337C8.68336 10.3918 9.21388 10.0373 9.66076 9.59045C10.1076 9.14357 10.4621 8.61304 10.704 8.02916C10.9458 7.44528 11.0703 6.81949 11.0703 6.1875C11.0703 5.55551 10.9458 4.92972 10.704 4.34584C10.4621 3.76196 10.1076 3.23143 9.66076 2.78455C9.21388 2.33767 8.68336 1.98318 8.09948 1.74133C7.5156 1.49948 6.8898 1.375 6.25781 1.375C4.98146 1.375 3.75738 1.88203 2.85486 2.78455C1.95234 3.68707 1.44531 4.91115 1.44531 6.1875C1.44531 7.46385 1.95234 8.68793 2.85486 9.59045C3.75738 10.493 4.98146 11 6.25781 11ZM11.9453 6.1875C11.9453 7.69592 11.3461 9.14256 10.2795 10.2092C9.21287 11.2758 7.76623 11.875 6.25781 11.875C4.74939 11.875 3.30276 11.2758 2.23614 10.2092C1.16953 9.14256 0.570313 7.69592 0.570312 6.1875C0.570313 4.67908 1.16953 3.23244 2.23614 2.16583C3.30276 1.09922 4.74939 0.5 6.25781 0.5C7.76623 0.5 9.21287 1.09922 10.2795 2.16583C11.3461 3.23244 11.9453 4.67908 11.9453 6.1875Z"
-                    fill="white"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_1537_600">
-                    <rect
-                      width="14"
-                      height="14"
-                      fill="white"
-                      transform="translate(0.570312 0.5)"
-                    />
-                  </clipPath>
-                </defs>
-              </svg>
-            </Navbar.Brand>
-
-            <NavDropdown title="About" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated linkd
-              </NavDropdown.Item>
-            </NavDropdown>
-            <NavDropdown title="Agents" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
-            <NavDropdown title="Contact" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
+            </div>
+        </div>
+        <div className="col-xl-3 row justify-content-center align-items-center d-flex">
+            <div className="col-2">
+                <div className="px-1 py-1 rounded-1 col-12 justify-content-center align-items-center d-flex">
+                <div className="col-10 d-flex justify-content-center align-items-center">
+    <p className="text-center text-white fs-6 fw-normal font-family-Poppins m-0 px-3 py-2 d-flex align-items-center"> 
+        About
+        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.70024 9.62993C6.74132 9.58874 6.79013 9.55607 6.84386 9.53377C6.89759 9.51148 6.95519 9.5 7.01336 9.5C7.07153 9.5 7.12913 9.51148 7.18286 9.53377C7.23659 9.55607 7.28539 9.58874 7.32648 9.62993L12.3204 14.6248L17.3144 9.62993C17.3555 9.58881 17.4043 9.55619 17.458 9.53394C17.5118 9.51169 17.5693 9.50023 17.6275 9.50023C17.6856 9.50023 17.7432 9.51169 17.797 9.53394C17.8507 9.55619 17.8995 9.58881 17.9406 9.62993C17.9817 9.67105 18.0144 9.71986 18.0366 9.77359C18.0589 9.82731 18.0703 9.8849 18.0703 9.94305C18.0703 10.0012 18.0589 10.0588 18.0366 10.1125C18.0144 10.1662 17.9817 10.215 17.9406 10.2562L12.6335 15.5632C12.5925 15.6044 12.5437 15.6371 12.4899 15.6594C12.4362 15.6817 12.3786 15.6932 12.3204 15.6932C12.2623 15.6932 12.2047 15.6817 12.1509 15.6594C12.0972 15.6371 12.0484 15.6044 12.0073 15.5632L6.70024 10.2562C6.65906 10.2151 6.62638 10.1663 6.60408 10.1125C6.58179 10.0588 6.57031 10.0012 6.57031 9.94305C6.57031 9.88487 6.58179 9.82727 6.60408 9.77354C6.62638 9.71981 6.65906 9.67101 6.70024 9.62993Z" fill="white"/>
+        </svg>
+    </p>
+</div>
+                </div>
+            </div>
+            <div className="col-3">
+                <div className="px-1 py-1 rounded-1 col-12 justify-content-center align-items-center d-flex">
+                    <div className="col-9 justify-content-center align-items-center">
+                        <p className="text-center text-white fs-6 fw-normal font-family-Poppins col-12 m-0 px-3 py-2">
+                        Agents
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div className="col-4">
+                <div className="px-1 py-1 rounded-5 border border-1 border-light col-12 justify-content-center align-items-center d-flex">
+                    <div className="col-7 justify-content-center align-items-center">
+                        <p className="text-center text-light fs-6 fw-normal font-family-Poppins col-12 m-0 px-3 py-2">
+                        Contact
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
+   
   );
 }
 
