@@ -292,7 +292,7 @@ const NavBar = () => {
               <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
-                Separated link
+                Separated linkd
               </NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Agents" id="basic-nav-dropdown">
